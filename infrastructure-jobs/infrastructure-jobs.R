@@ -42,5 +42,3 @@ statepay.NSA<-subset(statepay.NSA,select=c("series_id","date","state_name","valu
 require(reshape2)
 statepay.NSA.t<-dcast(statepay.NSA, date ~ state_name,value.var="value") #  ,fun.aggregate=mean)
 write.csv(statepay.NSA.t,file="statepayrolls.csv")
-
-
